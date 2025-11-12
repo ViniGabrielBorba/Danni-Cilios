@@ -199,3 +199,188 @@ function typeWriter(element, text, speed = 100) {
 console.log('%c$Wowlashes', 'font-size: 20px; font-weight: bold; color: #ff1493;');
 console.log('%cRealçando sua beleza com estilo! ✨', 'font-size: 14px; color: #9370db;');
 
+// ========== FUNCIONALIDADES ESPECÍFICAS POR PÁGINA ==========
+
+// Filtros de Produtos - Página Produtos
+document.addEventListener('DOMContentLoaded', () => {
+    const filtroBtns = document.querySelectorAll('.filtro-btn');
+    const produtoCards = document.querySelectorAll('.produto-card[data-categoria]');
+    
+    if (filtroBtns.length > 0) {
+        filtroBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active de todos os botões
+                filtroBtns.forEach(b => b.classList.remove('active'));
+                // Adiciona active no botão clicado
+                btn.classList.add('active');
+                
+                const categoria = btn.getAttribute('data-categoria');
+                
+                produtoCards.forEach(card => {
+                    if (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+});
+
+// FAQ Accordion - Página Contato
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Fecha todos os outros itens
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle do item atual
+                item.classList.toggle('active', !isActive);
+            });
+        }
+    });
+});
+
+// Formulário de Contato - Página Contato
+document.addEventListener('DOMContentLoaded', () => {
+    const contatoForm = document.getElementById('contatoForm');
+    
+    if (contatoForm) {
+        contatoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Coleta os dados do formulário
+            const formData = new FormData(contatoForm);
+            const dados = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                telefone: formData.get('telefone'),
+                assunto: formData.get('assunto'),
+                mensagem: formData.get('mensagem')
+            };
+            
+            // Validação básica
+            if (!dados.nome || !dados.email || !dados.assunto || !dados.mensagem) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Simulação de envio (aqui você integraria com um backend)
+            const btnSubmit = contatoForm.querySelector('.btn-submit');
+            const originalText = btnSubmit.textContent;
+            
+            btnSubmit.textContent = 'Enviando...';
+            btnSubmit.disabled = true;
+            
+            // Simula delay de envio
+            setTimeout(() => {
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve. ✨');
+                contatoForm.reset();
+                btnSubmit.textContent = originalText;
+                btnSubmit.disabled = false;
+            }, 1500);
+        });
+    }
+});
+
+// Animações adicionais para elementos específicos
+document.addEventListener('DOMContentLoaded', () => {
+    // Animar cards de destaque
+    const destaqueCards = document.querySelectorAll('.destaque-card, .valor-card, .diferencial-item');
+    destaqueCards.forEach((card, index) => {
+        card.classList.add('fade-in');
+        card.style.animationDelay = `${index * 0.1}s`;
+        observer.observe(card);
+    });
+    
+    // Animar galeria
+    const galeriaItems = document.querySelectorAll('.galeria-item');
+    galeriaItems.forEach((item, index) => {
+        item.classList.add('fade-in');
+        item.style.animationDelay = `${index * 0.15}s`;
+        observer.observe(item);
+    });
+    
+    // Animar timeline
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+        item.classList.add('fade-in');
+        item.style.animationDelay = `${index * 0.2}s`;
+        observer.observe(item);
+    });
+    
+    // Animar info cards
+    const infoCards = document.querySelectorAll('.info-card');
+    infoCards.forEach((card, index) => {
+        card.classList.add('fade-in');
+        card.style.animationDelay = `${index * 0.1}s`;
+        observer.observe(card);
+    });
+});
+
+// Efeito de hover melhorado nos cards de produto
+document.addEventListener('DOMContentLoaded', () => {
+    const produtoCards = document.querySelectorAll('.produto-card');
+    
+    produtoCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.transition = 'all 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+
+// Detectar página atual e destacar no menu
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Adicionar efeito de scroll suave para elementos internos
+document.addEventListener('DOMContentLoaded', () => {
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerHeight = header ? header.offsetHeight : 80;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
+

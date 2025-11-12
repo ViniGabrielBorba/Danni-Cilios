@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$Wowlashes | Contato - Fale Conosco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="Logo $Wowlashes" class="logo">
+                </a>
+                <a href="index.html" class="brand-name-link">
+                    <h1 class="brand-name">$Wowlashes DIEVILLY DANIELLE XAVIER TORRES</h1>
+                </a>
+            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner Contato -->
+    <section class="page-banner contato-banner">
+        <div class="container">
+            <h1 class="page-title">Entre em Contato</h1>
+            <p class="page-subtitle">Estamos aqui para ajudar você a encontrar os produtos perfeitos</p>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato-page">
+        <div class="container">
+            <div class="contato-content">
+                <!-- Formulário -->
+                <div class="contato-form-section">
+                    <h2 class="section-title">Envie sua Mensagem</h2>
+                    <form class="contato-form" id="contatoForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone/WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="produto">Dúvida sobre produto</option>
+                                <option value="pedido">Acompanhamento de pedido</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div class="contato-info-section">
+                    <h2 class="section-title">Outras Formas de Contato</h2>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📱</div>
+                            <h3>WhatsApp</h3>
+                            <p>Fale conosco diretamente pelo WhatsApp</p>
+                            <a href="https://wa.me/5511999999999" class="btn-info" target="_blank">Abrir WhatsApp</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">✉️</div>
+                            <h3>E-mail</h3>
+                            <p>Envie um e-mail para nossa equipe</p>
+                            <a href="mailto:contato@wowlashes.com" class="btn-info">contato@wowlashes.com</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📷</div>
+                            <h3>Instagram</h3>
+                            <p>Siga-nos e veja nossos produtos</p>
+                            <a href="https://instagram.com/wowlashes" class="btn-info" target="_blank">@wowlashes</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Rápido -->
+                    <div class="faq-section">
+                        <h3>Perguntas Frequentes</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Como faço um pedido?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Entre em contato conosco pelo WhatsApp ou preencha o formulário acima. Nossa equipe entrará em contato para finalizar seu pedido.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Qual o prazo de entrega?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>O prazo de entrega varia conforme sua localização. Geralmente entre 3 a 7 dias úteis após a confirmação do pagamento.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Vocês fazem trocas?</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sim! Aceitamos trocas em até 7 dias após o recebimento, desde que o produto esteja em perfeito estado e na embalagem original.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">$Wowlashes</h3>
+                    <p class="footer-text">Realçando sua beleza com estilo e elegância.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Início</a>
+                        <a href="produtos.html" class="footer-link">Produtos</a>
+                        <a href="sobre.html" class="footer-link">Sobre</a>
+                        <a href="contato.html" class="footer-link">Contato</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="footer-contacts">
+                        <a href="https://wa.me/5511999999999" class="footer-link" target="_blank">
+                            <span class="footer-icon">📱</span> WhatsApp
+                        </a>
+                        <a href="mailto:contato@wowlashes.com" class="footer-link">
+                            <span class="footer-icon">✉️</span> E-mail
+                        </a>
+                        <a href="https://instagram.com/wowlashes" class="footer-link" target="_blank">
+                            <span class="footer-icon">📷</span> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 $Wowlashes DIEVILLY DANIELLE XAVIER TORRES. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

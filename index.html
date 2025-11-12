@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$Wowlashes DIEVILLY DANIELLE XAVIER TORRES | Beleza Premium</title>
+    <title>$Wowlashes | Início - Beleza Premium</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,19 @@
     <header class="header" id="header">
         <div class="container">
             <div class="logo-container">
-                <img src="logo.jpg" alt="Logo $Wowlashes" class="logo">
-                <h1 class="brand-name">$Wowlashes DIEVILLY DANIELLE XAVIER TORRES</h1>
+                <a href="index.html">
+                    <img src="logo.jpg" alt="Logo $Wowlashes" class="logo">
+                </a>
+                <a href="index.html" class="brand-name-link">
+                    <h1 class="brand-name">$Wowlashes DIEVILLY DANIELLE XAVIER TORRES</h1>
+                </a>
             </div>
             <nav class="nav" id="nav">
                 <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link">Início</a></li>
-                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                    <li><a href="index.html" class="nav-link active">Início</a></li>
+                    <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
@@ -38,122 +42,96 @@
         <div class="hero-content">
             <h2 class="hero-title">Realce sua Beleza com Estilo ✨</h2>
             <p class="hero-subtitle">Produtos premium de beleza — cílios, espumas de limpeza, mini ventiladores e muito mais.</p>
-            <a href="#produtos" class="btn-primary">Ver produtos</a>
+            <div class="hero-buttons">
+                <a href="produtos.html" class="btn-primary">Ver produtos</a>
+                <a href="sobre.html" class="btn-secondary">Conheça nossa história</a>
+            </div>
         </div>
         <div class="hero-gradient"></div>
+        <div class="hero-particles"></div>
     </section>
 
-    <!-- Produtos Section -->
-    <section class="produtos" id="produtos">
+    <!-- Destaques -->
+    <section class="destaques">
         <div class="container">
-            <h2 class="section-title">Nossos Produtos</h2>
-            <div class="produtos-grid">
-                <!-- Produto 1: Cílios Postiços - Fio U YY Fadvan -->
+            <div class="destaques-grid">
+                <div class="destaque-card">
+                    <div class="destaque-icon">✨</div>
+                    <h3>Qualidade Premium</h3>
+                    <p>Produtos selecionados com os mais altos padrões de qualidade</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-icon">💎</div>
+                    <h3>Elegância Única</h3>
+                    <p>Realce sua beleza natural com produtos sofisticados</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-icon">🌟</div>
+                    <h3>Confiança Garantida</h3>
+                    <p>Resultados que transformam e elevam sua autoestima</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Produtos -->
+    <section class="preview-produtos">
+        <div class="container">
+            <h2 class="section-title">Produtos em Destaque</h2>
+            <div class="produtos-grid preview-grid">
                 <div class="produto-card">
                     <div class="produto-image">
                         <img src="Fio - U -  YY - Fadvan .jpg" alt="Cílios Postiços Fio U YY Fadvan">
                     </div>
                     <div class="produto-info">
                         <h3 class="produto-nome">Cílios Postiços Fio U</h3>
-                        <p class="produto-descricao">Extensão de cílios formato U da marca Fadvan, perfeita para um olhar marcante e natural.</p>
-                        <button class="btn-comprar">Comprar</button>
+                        <p class="produto-descricao">Extensão de cílios formato U da marca Fadvan.</p>
+                        <a href="produtos.html" class="btn-comprar">Ver mais</a>
                     </div>
                 </div>
-
-                <!-- Produto 2: Cílios Postiços - Fio Marrom Nagaraku -->
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img src="Fio Marrom - 0.07 - D - Nagaraku.jpg" alt="Cílios Postiços Fio Marrom Nagaraku">
-                    </div>
-                    <div class="produto-info">
-                        <h3 class="produto-nome">Cílios Postiços Marrom</h3>
-                        <p class="produto-descricao">Fio marrom 0.07mm formato D da marca Nagaraku, ideal para um visual suave e elegante.</p>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
-                </div>
-
-                <!-- Produto 3: Espuma de Limpeza -->
                 <div class="produto-card">
                     <div class="produto-image">
                         <img src="Espuma de Limpeza.jpg" alt="Espuma de Limpeza Facial">
                     </div>
                     <div class="produto-info">
-                        <h3 class="produto-nome">Espuma de Limpeza Facial</h3>
-                        <p class="produto-descricao">Espuma suave e eficaz para limpeza profunda da pele, mantendo sua beleza sempre em dia.</p>
-                        <button class="btn-comprar">Comprar</button>
+                        <h3 class="produto-nome">Espuma de Limpeza</h3>
+                        <p class="produto-descricao">Limpeza profunda e suave para sua pele.</p>
+                        <a href="produtos.html" class="btn-comprar">Ver mais</a>
                     </div>
                 </div>
-
-                <!-- Produto 4: Mini Ventilador -->
                 <div class="produto-card">
                     <div class="produto-image">
                         <img src="Mini Ventilador.jpg" alt="Mini Ventilador">
                     </div>
                     <div class="produto-info">
                         <h3 class="produto-nome">Mini Ventilador</h3>
-                        <p class="produto-descricao">Ventilador portátil perfeito para secagem rápida e cuidados com seus cílios e maquiagem.</p>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
-                </div>
-
-                <!-- Produto 5: Adesivo Uniglue -->
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img src="Adesivo Uniglue.jpg" alt="Adesivo Uniglue">
-                    </div>
-                    <div class="produto-info">
-                        <h3 class="produto-nome">Adesivo Uniglue</h3>
-                        <p class="produto-descricao">Adesivo profissional de alta qualidade para aplicação segura e duradoura de cílios postiços.</p>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
-                </div>
-
-                <!-- Produto 6: Fita Siliconada -->
-                <div class="produto-card">
-                    <div class="produto-image">
-                        <img src="Fita siliconada.jpg" alt="Fita Siliconada">
-                    </div>
-                    <div class="produto-info">
-                        <h3 class="produto-nome">Fita Siliconada</h3>
-                        <p class="produto-descricao">Fita siliconada profissional para auxiliar na aplicação perfeita de extensões de cílios.</p>
-                        <button class="btn-comprar">Comprar</button>
+                        <p class="produto-descricao">Secagem rápida e cuidados profissionais.</p>
+                        <a href="produtos.html" class="btn-comprar">Ver mais</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <h2 class="section-title">Sobre a $Wowlashes</h2>
-                    <p class="sobre-paragrafo">
-                        A $Wowlashes nasceu do desejo de realçar a beleza feminina com produtos de qualidade, elegância e confiança. 
-                        Nossa missão é oferecer às mulheres produtos premium que destacam sua beleza natural, proporcionando 
-                        autoconfiança e sofisticação em cada detalhe.
-                    </p>
-                    <p class="sobre-paragrafo">
-                        Com dedicação e paixão pela estética, selecionamos cuidadosamente cada produto para garantir 
-                        excelência e satisfação. Seja para um look do dia a dia ou para ocasiões especiais, 
-                        a $Wowlashes está aqui para realçar sua beleza única.
-                    </p>
-                </div>
-                <div class="sobre-image">
-                    <img src="IMG-20251112-WA0037.jpg" alt="Mulher usando cílios postiços" class="sobre-img">
-                </div>
+            <div class="text-center">
+                <a href="produtos.html" class="btn-primary">Ver todos os produtos</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contato">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 class="footer-title">$Wowlashes</h3>
                     <p class="footer-text">Realçando sua beleza com estilo e elegância.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Navegação</h3>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Início</a>
+                        <a href="produtos.html" class="footer-link">Produtos</a>
+                        <a href="sobre.html" class="footer-link">Sobre</a>
+                        <a href="contato.html" class="footer-link">Contato</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-title">Contato</h3>
@@ -169,14 +147,6 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h3 class="footer-title">Redes Sociais</h3>
-                    <div class="social-links">
-                        <a href="https://instagram.com/wowlashes" class="social-link" target="_blank" aria-label="Instagram">Instagram</a>
-                        <a href="https://facebook.com/wowlashes" class="social-link" target="_blank" aria-label="Facebook">Facebook</a>
-                        <a href="https://tiktok.com/@wowlashes" class="social-link" target="_blank" aria-label="TikTok">TikTok</a>
-                    </div>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 $Wowlashes DIEVILLY DANIELLE XAVIER TORRES. Todos os direitos reservados.</p>
@@ -187,4 +157,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
